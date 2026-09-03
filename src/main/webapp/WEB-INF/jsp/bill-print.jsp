@@ -120,13 +120,7 @@
                 </span>
 
                 <strong>
-                    <!--
-                        billDate is java.time.LocalDateTime.
-                        JSTL fmt:formatDate expects java.util.Date,
-                        therefore c:out is used to prevent the
-                        LocalDateTime conversion exception.
-                    -->
-                    <c:out value="${bill.billDate}"/>
+                    <c:out value="${formattedBillDate}"/>
                 </strong>
 
             </div>

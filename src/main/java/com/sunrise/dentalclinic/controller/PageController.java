@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.security.Principal;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @Controller
 public class PageController {
@@ -21,6 +23,23 @@ public class PageController {
     private final BillingService billingService;
     private final PaymentService paymentService;
 
+    /*
+     * Common professional date/time format used
+     * for printable clinic documents.
+     *
+     * Example:
+     * 03 Sep 2026 - 08:56 PM
+     */
+    private static final DateTimeFormatter DOCUMENT_DATE_TIME_FORMAT =
+            DateTimeFormatter.ofPattern(
+                    "dd MMM yyyy - hh:mm a",
+                    Locale.ENGLISH
+            );
+
+
+    // =========================================================
+    // CONSTRUCTOR
+    // =========================================================
 
     public PageController(
             StaffUserRepository staffUserRepository,
@@ -28,14 +47,9 @@ public class PageController {
             PaymentService paymentService
     ) {
 
-        this.staffUserRepository =
-                staffUserRepository;
-
-        this.billingService =
-                billingService;
-
-        this.paymentService =
-                paymentService;
+        this.staffUserRepository = staffUserRepository;
+        this.billingService = billingService;
+        this.paymentService = paymentService;
     }
 
 
@@ -201,15 +215,39 @@ public class PageController {
 
 
         Bill bill =
-                billingService
-                        .getBillById(
-                                billId
-                        );
+                billingService.getBillById(
+                        billId
+                );
 
 
         model.addAttribute(
                 "bill",
                 bill
+        );
+
+
+        /*
+         * LocalDateTime is formatted in Java rather than
+         * using JSTL fmt:formatDate.
+         *
+         * This prevents the LocalDateTime -> java.util.Date
+         * conversion error experienced in the cloud deployment.
+         */
+        String formattedBillDate = "";
+
+        if (bill.getBillDate() != null) {
+
+            formattedBillDate =
+                    bill.getBillDate()
+                            .format(
+                                    DOCUMENT_DATE_TIME_FORMAT
+                            );
+        }
+
+
+        model.addAttribute(
+                "formattedBillDate",
+                formattedBillDate
         );
 
 
@@ -254,15 +292,35 @@ public class PageController {
 
 
         Payment payment =
-                paymentService
-                        .getPaymentById(
-                                paymentId
-                        );
+                paymentService.getPaymentById(
+                        paymentId
+                );
 
 
         model.addAttribute(
                 "payment",
                 payment
+        );
+
+
+        /*
+         * Professional printable payment date.
+         */
+        String formattedPaymentDate = "";
+
+        if (payment.getPaymentDate() != null) {
+
+            formattedPaymentDate =
+                    payment.getPaymentDate()
+                            .format(
+                                    DOCUMENT_DATE_TIME_FORMAT
+                            );
+        }
+
+
+        model.addAttribute(
+                "formattedPaymentDate",
+                formattedPaymentDate
         );
 
 
@@ -337,9 +395,10 @@ public class PageController {
         return "access-denied";
     }
 
-    // =========================
-// HELP & USER GUIDE
-// =========================
+
+    // =========================================================
+    // HELP & USER GUIDE
+    // =========================================================
 
     @GetMapping("/help")
     public String help(

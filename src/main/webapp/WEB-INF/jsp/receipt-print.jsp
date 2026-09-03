@@ -135,7 +135,7 @@
                 </span>
 
                 <strong>
-                    <c:out value="${payment.paymentDate}"/>
+                    <c:out value="${formattedPaymentDate}"/>
                 </strong>
 
             </div>
