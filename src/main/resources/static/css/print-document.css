@@ -1,0 +1,890 @@
+/* =========================================================
+   SUNRISE DENTAL CLINIC
+   BILL & RECEIPT PRINT DOCUMENT
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary: #0b5d75;
+    --primary-light: #e9f7fb;
+
+    --text: #1d2939;
+    --secondary: #667085;
+
+    --border: #e4e7ec;
+
+    --background: #eef2f6;
+
+    --success: #027a48;
+    --success-bg: #ecfdf3;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+    font-family:
+            Inter,
+            "Segoe UI",
+            Arial,
+            sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.document-page {
+    width: 100%;
+
+    padding: 35px 20px 60px;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.document-actions {
+    width: 100%;
+    max-width: 850px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto 18px;
+}
+
+
+.document-actions button {
+    min-height: 42px;
+
+    padding: 0 17px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.back-btn {
+    border: 1px solid #d0d5dd;
+
+    background: white;
+
+    color: #344054;
+}
+
+
+.back-btn:hover {
+    background: #f8fafc;
+}
+
+
+.print-btn {
+    border: none;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #0b5d75,
+                    #1596b8
+            );
+
+    color: white;
+
+    box-shadow:
+            0 7px 18px rgba(11, 93, 117, 0.18);
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+.document {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 1100px;
+
+    margin: 0 auto;
+
+    padding: 48px 52px;
+
+    background: white;
+
+    border-radius: 4px;
+
+    box-shadow:
+            0 15px 45px rgba(16, 24, 40, 0.10);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.document-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.clinic-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.clinic-logo {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #0b5d75,
+                    #1596b8
+            );
+
+    font-size: 28px;
+}
+
+
+.clinic-brand h1 {
+    margin-bottom: 5px;
+
+    color: #073b4c;
+
+    font-size: 23px;
+}
+
+
+.clinic-brand p {
+    color: var(--secondary);
+
+    font-size: 10px;
+}
+
+
+.document-type {
+    text-align: right;
+}
+
+
+.document-type span {
+    color: #98a2b3;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.document-type h2 {
+    margin-top: 3px;
+
+    color: var(--primary);
+
+    font-size: 27px;
+
+    letter-spacing: 1px;
+}
+
+
+.header-line {
+    height: 3px;
+
+    margin: 25px 0;
+
+    border-radius: 20px;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    #0b5d75,
+                    #1596b8,
+                    #d7f1f8
+            );
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.document-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 27px;
+}
+
+
+.document-meta div {
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: #fbfcfd;
+}
+
+
+.document-meta span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #98a2b3;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+.document-meta strong {
+    color: #344054;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.info-section,
+.charges-section {
+    margin-top: 27px;
+}
+
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+
+.section-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--primary-light);
+
+    font-size: 16px;
+}
+
+
+.section-title h3 {
+    margin-bottom: 2px;
+
+    font-size: 13px;
+}
+
+
+.section-title p {
+    color: #98a2b3;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   INFO GRID
+   ========================================================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    border:
+            1px solid var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.info-item {
+    min-height: 67px;
+
+    padding: 14px 16px;
+
+    border-bottom:
+            1px solid var(--border);
+}
+
+
+.info-item:nth-child(odd) {
+    border-right:
+            1px solid var(--border);
+}
+
+
+.info-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+}
+
+
+.info-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #98a2b3;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+}
+
+
+.info-item strong {
+    color: #344054;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CHARGES
+   ========================================================= */
+
+.charges-table {
+    overflow: hidden;
+
+    border:
+            1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+
+.charge-row {
+    min-height: 49px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 180px;
+
+    align-items: center;
+
+    padding: 0 17px;
+
+    border-bottom:
+            1px solid var(--border);
+
+    font-size: 10px;
+}
+
+
+.charge-row:last-child {
+    border-bottom: none;
+}
+
+
+.charge-row > :last-child {
+    text-align: right;
+}
+
+
+.charge-header {
+    min-height: 38px;
+
+    background: #f8fafc;
+
+    color: #667085;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.total-charge {
+    min-height: 57px;
+
+    background: #f0f9fc;
+}
+
+
+.total-charge span {
+    color: #344054;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.total-charge strong {
+    color: var(--primary);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PAYMENT SUCCESS
+   ========================================================= */
+
+.payment-success {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    margin: 25px 0;
+
+    padding: 20px;
+
+    border:
+            1px solid #abefc6;
+
+    border-radius: 11px;
+
+    background: var(--success-bg);
+}
+
+
+.success-icon {
+    width: 47px;
+    height: 47px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--success);
+
+    color: white;
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+
+.payment-success span {
+    color: var(--success);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.payment-success h2 {
+    margin: 3px 0;
+
+    color: #05603a;
+
+    font-size: 21px;
+}
+
+
+.payment-success p {
+    color: #478365;
+
+    font-size: 8px;
+}
+
+
+.payment-status,
+.received-amount {
+    color: var(--success) !important;
+}
+
+
+/* =========================================================
+   RECEIPT SUMMARY
+   ========================================================= */
+
+.receipt-summary {
+    margin-top: 27px;
+
+    margin-left: auto;
+
+    width: 360px;
+
+    overflow: hidden;
+
+    border:
+            1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+
+.receipt-summary > div {
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    border-bottom:
+            1px solid var(--border);
+
+    font-size: 10px;
+}
+
+
+.receipt-summary > div:last-child {
+    border-bottom: none;
+}
+
+
+.receipt-summary span {
+    color: var(--secondary);
+}
+
+
+.balance-row {
+    min-height: 55px !important;
+
+    background: #f8fafc;
+}
+
+
+.balance-row span,
+.balance-row strong {
+    font-weight: 800;
+}
+
+
+.balance-row strong {
+    color: var(--primary);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.document-note {
+    margin-top: 30px;
+
+    padding: 15px 17px;
+
+    border-left:
+            3px solid #1596b8;
+
+    background: #f8fbfc;
+}
+
+
+.document-note strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #344054;
+
+    font-size: 9px;
+}
+
+
+.document-note p {
+    color: #667085;
+
+    font-size: 8px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.signature-section {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 100px;
+
+    margin-top: 70px;
+}
+
+
+.signature-box {
+    text-align: center;
+}
+
+
+.signature-line {
+    height: 1px;
+
+    margin-bottom: 7px;
+
+    background: #98a2b3;
+}
+
+
+.signature-box span {
+    color: #667085;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.document-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-top: 55px;
+
+    padding-top: 14px;
+
+    border-top:
+            1px solid var(--border);
+
+    color: #98a2b3;
+
+    font-size: 7px;
+}
+
+
+.document-footer strong,
+.document-footer span {
+    display: block;
+}
+
+
+.document-footer strong {
+    margin-bottom: 3px;
+
+    color: #667085;
+
+    font-size: 8px;
+}
+
+
+.footer-right {
+    text-align: right;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .document-page {
+        padding:
+                15px 10px 30px;
+    }
+
+
+    .document {
+        min-height: auto;
+
+        padding:
+                30px 20px;
+    }
+
+
+    .document-header {
+        align-items: flex-start;
+    }
+
+
+    .clinic-brand h1 {
+        font-size: 18px;
+    }
+
+
+    .clinic-logo {
+        width: 48px;
+        height: 48px;
+
+        font-size: 23px;
+    }
+
+
+    .document-type h2 {
+        font-size: 20px;
+    }
+
+
+    .document-meta {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-item,
+    .info-item:nth-child(odd),
+    .info-item:nth-last-child(-n + 2) {
+        border-right: none;
+
+        border-bottom:
+                1px solid var(--border);
+    }
+
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+
+    .charge-row {
+        grid-template-columns:
+            1fr 120px;
+    }
+
+
+    .receipt-summary {
+        width: 100%;
+    }
+
+
+    .signature-section {
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   PRINT SETTINGS
+   ========================================================= */
+
+@page {
+    size: A4;
+    margin: 12mm;
+}
+
+
+@media print {
+
+    html,
+    body {
+        width: 100%;
+
+        background: white;
+    }
+
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+
+    .no-print {
+        display: none !important;
+    }
+
+
+    .document-page {
+        padding: 0;
+    }
+
+
+    .document {
+        width: 100%;
+        max-width: none;
+
+        min-height: auto;
+
+        margin: 0;
+
+        padding: 0;
+
+        box-shadow: none;
+
+        border-radius: 0;
+    }
+
+
+    .info-section,
+    .charges-section,
+    .payment-success,
+    .receipt-summary,
+    .document-note,
+    .signature-section {
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+    }
+}

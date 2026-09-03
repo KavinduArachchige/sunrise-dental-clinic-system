@@ -1,0 +1,84 @@
+.staff-role {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.role-admin {
+    background: #f4ebff;
+    color: #6941c6;
+}
+
+.role-receptionist {
+    background: #eff8ff;
+    color: #175cd3;
+}
+
+.staff-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.status-active {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.status-inactive {
+    background: #fef3f2;
+    color: #b42318;
+}
+
+.staff-action-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.role-btn,
+.status-btn,
+.password-btn {
+    border: none;
+
+    padding: 7px 9px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.role-btn {
+    background: #eff8ff;
+    color: #175cd3;
+}
+
+.status-btn {
+    background: #fff7e8;
+    color: #b54708;
+}
+
+.password-btn {
+    background: #f4ebff;
+    color: #6941c6;
+}

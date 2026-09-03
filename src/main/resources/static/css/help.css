@@ -1,0 +1,593 @@
+/* =========================================================
+   SUNRISE DENTAL CLINIC
+   HELP & USER GUIDE
+   ========================================================= */
+
+.help-content {
+    padding: 30px 35px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.help-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 30px 32px;
+
+    margin-bottom: 24px;
+
+    border-radius: 19px;
+
+    background:
+            linear-gradient(
+                    120deg,
+                    #0b4f6c,
+                    #146c94,
+                    #19a7ce
+            );
+
+    color: white;
+
+    box-shadow:
+            0 15px 35px
+            rgba(20, 108, 148, 0.18);
+}
+
+
+.help-label {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+    opacity: 0.78;
+}
+
+
+.help-hero h2 {
+    margin-bottom: 8px;
+
+    font-size: 26px;
+}
+
+
+.help-hero p {
+    max-width: 700px;
+
+    color:
+            rgba(255, 255, 255, 0.82);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.help-hero-icon {
+    flex-shrink: 0;
+
+    padding-right: 35px;
+
+    font-size: 72px;
+
+    opacity: 0.18;
+}
+
+
+/* =========================================================
+   HELP SECTION
+   ========================================================= */
+
+.help-section {
+    margin-bottom: 22px;
+
+    padding: 22px;
+
+    border:
+            1px solid #e4e7ec;
+
+    border-radius: 16px;
+
+    background: white;
+
+    box-shadow:
+            0 8px 30px
+            rgba(16, 24, 40, 0.05);
+}
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.section-heading-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #edf8fc;
+
+    font-size: 20px;
+}
+
+
+.section-heading h3 {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+
+    color: #1d2939;
+}
+
+
+.section-heading p {
+    color: #98a2b3;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   GETTING STARTED CARDS
+   ========================================================= */
+
+.step-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.step-card {
+    position: relative;
+
+    min-height: 155px;
+
+    padding: 20px;
+
+    border:
+            1px solid #edf0f4;
+
+    border-radius: 13px;
+
+    background:
+            #fbfcfe;
+
+    transition:
+            transform 0.2s ease,
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+
+.step-card:hover {
+    transform:
+            translateY(-3px);
+
+    border-color:
+            #bcdde8;
+
+    box-shadow:
+            0 10px 25px
+            rgba(20, 108, 148, 0.08);
+}
+
+
+.step-number {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    border-radius: 9px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #146c94,
+                    #19a7ce
+            );
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+.step-card h4 {
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #1d2939;
+}
+
+
+.step-card p {
+    color: #667085;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   INSTRUCTION CARDS
+   ========================================================= */
+
+.instruction-card {
+    padding: 18px 20px;
+
+    border:
+            1px solid #edf0f4;
+
+    border-radius: 12px;
+
+    background:
+            #fbfcfe;
+}
+
+
+.instruction-card ol {
+    padding-left: 22px;
+}
+
+
+.instruction-card li {
+    padding: 8px 0;
+
+    color: #475467;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+
+.instruction-card li::marker {
+    color: #146c94;
+
+    font-weight: 800;
+}
+
+
+.instruction-card strong {
+    color: #1d2939;
+}
+
+
+/* =========================================================
+   NOTES / WARNINGS
+   ========================================================= */
+
+.guide-note,
+.guide-warning {
+    margin-top: 16px;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+.guide-note {
+    border-left:
+            3px solid #1570ef;
+
+    background:
+            #eff8ff;
+
+    color: #344054;
+}
+
+
+.guide-note strong {
+    color: #175cd3;
+}
+
+
+.guide-warning {
+    border-left:
+            3px solid #f79009;
+
+    background:
+            #fff8eb;
+
+    color: #344054;
+}
+
+
+.guide-warning strong {
+    color: #b54708;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.faq-list details {
+    overflow: hidden;
+
+    border:
+            1px solid #e4e7ec;
+
+    border-radius: 11px;
+
+    background:
+            #fbfcfe;
+}
+
+
+.faq-list summary {
+    position: relative;
+
+    padding: 15px 45px 15px 16px;
+
+    list-style: none;
+
+    cursor: pointer;
+
+    color: #344054;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.faq-list summary::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    transform:
+            translateY(-50%);
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf8fc;
+
+    color: #146c94;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+            transform 0.2s ease;
+}
+
+
+.faq-list details[open] summary::after {
+    content: "−";
+}
+
+
+.faq-list details[open] summary {
+    border-bottom:
+            1px solid #edf0f4;
+
+    background: white;
+}
+
+
+.faq-list details p {
+    padding: 14px 16px 16px;
+
+    color: #667085;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SECURITY CARD
+   ========================================================= */
+
+.security-help-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 22px;
+
+    border:
+            1px solid #abefc6;
+
+    border-radius: 14px;
+
+    background:
+            #ecfdf3;
+}
+
+
+.security-help-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #d1fadf;
+
+    font-size: 21px;
+}
+
+
+.security-help-card h3 {
+    margin-bottom: 5px;
+
+    color: #05603a;
+
+    font-size: 13px;
+}
+
+
+.security-help-card p {
+    color: #397957;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HELP FOOTER
+   ========================================================= */
+
+.help-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 17px 2px 5px;
+
+    border-top:
+            1px solid #e4e7ec;
+
+    color: #98a2b3;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+    .step-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .help-content {
+        padding:
+                20px 15px;
+    }
+
+
+    .help-hero {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+
+    .help-hero h2 {
+        font-size: 22px;
+    }
+
+
+    .help-hero-icon {
+        display: none;
+    }
+
+
+    .step-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .help-section {
+        padding: 17px;
+    }
+
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+
+    .instruction-card {
+        padding: 15px;
+    }
+
+
+    .help-footer {
+        display: block;
+    }
+
+
+    .help-footer span {
+        display: block;
+
+        margin-bottom: 5px;
+    }
+}
