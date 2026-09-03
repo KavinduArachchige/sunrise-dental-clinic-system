@@ -6,9 +6,7 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
@@ -18,7 +16,6 @@
 
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/css/print-document.css">
-
 </head>
 
 <body>
@@ -52,7 +49,9 @@
 
     <div class="document">
 
-        <!-- HEADER -->
+        <!-- =========================
+             HEADER
+             ========================= -->
 
         <header class="document-header">
 
@@ -121,9 +120,13 @@
                 </span>
 
                 <strong>
-                    <fmt:formatDate
-                            value="${bill.billDate}"
-                            pattern="dd MMM yyyy - hh:mm a"/>
+                    <!--
+                        billDate is java.time.LocalDateTime.
+                        JSTL fmt:formatDate expects java.util.Date,
+                        therefore c:out is used to prevent the
+                        LocalDateTime conversion exception.
+                    -->
+                    <c:out value="${bill.billDate}"/>
                 </strong>
 
             </div>
